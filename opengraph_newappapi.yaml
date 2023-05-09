@@ -1,0 +1,480 @@
+openapi: 3.0.0
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/RJARCHE1_1/NewApp/1.0.0
+  - description: salesforce 
+    url: https://edplus-asu--newapp.sandbox.my.salesforce.com
+info:
+  version: "1.0.0"
+  title: New Application Api
+  description: >-
+   paths
+
+paths:
+  /services/oauth2/token:
+    post:
+      summary: Generate Auth Token
+      requestBody:
+        description: get oauth token
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+                grant_type:
+                  type: string
+                client_id:
+                  type: string
+                client_secret:
+                  type: string
+              example: 
+                username: 'user@salesforceinstance.com'
+                password: 'userpassword'
+                grant_type: 'password'
+                client_id: '[usersClientId]'
+                client_secret: '[usersClientSecret]'
+          text/plain:
+            schema:
+              type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  access_token: 00D7f.....AENI!ARwAQKHYb...
+                  instance_url: https://instance.my.salesforce.com
+                  id: https://domain.salesforce.com/id/.../...
+                  token_type: Bearer
+                  issued_at: '1682554353541'
+                  signature: 32cpNN2...Xy1i0...
+          links:
+            postman:
+              operationRef: https://documenter.getpostman.com/view/16562029/2s93eR3vUv
+                  
+            
+          
+        
+  /services/apexrest/InteractionApi:
+    post:
+      summary: Adds a new interaction
+      security:
+        - basicAuth: []
+      requestBody:
+        content:
+          application/json:
+            schema:      # Request body contents
+              type: object
+              properties:
+                firstName:
+                  type: string
+                  maxLength: 30
+                prefferedName:
+                  type: string
+                  maxLength: 30
+                middleName:
+                  type: string
+                  maxLength: 30
+                lastName:
+                  type: string
+                  maxLength: 30
+                suffix:
+                  type: string
+                  enum: [ Jr., Sr., II, III, IV ]
+                email:
+                  type: string
+                  maxLength: 50
+                dateOfBirth:
+                  type: string
+                  maxLength: 10
+                isApplication:
+                  type: string
+                  enum: ['Y', 'N']
+                interactionSource:
+                  type: string
+                  maxLength: 30
+                pronoun:
+                  type: string
+                  maxLength: 10
+                gender:
+                  type: string
+                  maxLength: 30
+                formerFirstName:
+                  type: string
+                  maxLength: 30
+                formerMiddleName:
+                  type: string
+                  maxLength: 30
+                formerLastName:
+                  type: string
+                  maxLength: 30
+                sex:
+                  type: string
+                  enum: ['Male', 'Female']
+                primaryLanguageAtHome:
+                  type: string
+                  maxLength: 40 
+                countryCode:
+                  type: string
+                  maxLength: 3
+                address1:
+                  type: string
+                  maxLength: 50
+                address2:
+                  type: string
+                  maxLength: 50
+                city:
+                  type: string
+                  maxLength:  50
+                stateProvince:
+                  type: string
+                  maxLength: 30
+                postalCode:
+                  type: string
+                  maxLength: 10
+                mobilePhoneNumber:
+                  type: string
+                  maxLength: 10
+                smsOk:
+                  type: string
+                  enum: ['Y', 'N']
+                phoneNumber:
+                  type: string
+                  maxLength: 10
+                isLatino:
+                  type: string
+                  enum: ['Y','N']
+                latinoOrigin:
+                  type: string
+                  maxLength: 50
+                ethnicGroupCode:
+                  type: string
+                  maxLength: 3
+                usCitizen:
+                  type: string
+                  enum: ['Y', 'N']
+                birthCountry:
+                  type: string
+                  maxLength: 30
+                visaCode:
+                  type: string
+                  maxLength: 10
+                citizenCountry:
+                  type: string
+                  maxLength: 3
+                guardianFirstName:
+                  type: string
+                  maxLength: 40
+                guardianLastName:
+                  type: string
+                  maxLength: 40
+                guardianRelation:
+                  type: string
+                  maxLength: 40
+                guardianIsLiving:
+                    type: string
+                    maxLength: 30
+                attendedAsu:
+                    type: string
+                    maxLength: 30
+                empId:
+                    type: string
+                    maxLength: 30
+                infoPageFlag:
+                    type: string
+                    enum: ['Y', 'N']
+                newApplicationAccountCreation:
+                    type: string
+                    enum: ['Y', 'N']
+                majorComplete:
+                    type: string
+                    enum: ['Y', 'N']
+                asuProgramKey:
+                    type: string
+                    maxLength: 30
+                asuStartTerm:
+                    type: string
+                    maxLength: 30
+                asuProgramChoice:
+                    type: string
+                    maxLength: 30
+                asuSecondProgramChoice:
+                    type: string
+                    maxLength: 30
+                asuSecondProgramTerm:
+                    type: string
+                    maxLength: 30
+                asuSecondProgramLocation:
+                    type: string
+                    maxLength: 50
+                asuThirdProgramChoice:
+                    type: string
+                    maxLength: 50
+                asuThirdProgramTerm:
+                    type: string
+                    maxLength: 50
+                asuThirdProgramLocation:
+                    type: string
+                    maxLength: 50
+                institutionInfoCompFlag:
+                    type: string
+                    enum: ['Y', 'N']
+                asuCompletedGrades:
+                    type: string
+                    enum: ['Y', 'N']
+                asuCompletedResidency:
+                    type: string
+                    enum: ['Y', 'N']
+                permanentState:
+                    type: string
+                    maxLength: 3
+                oneYearOfResidency:
+                    type: string
+                    enum: ['Y', 'N']
+                residencyStartDate:
+                    type: string
+                    maxLength: 30
+                currentlyEnrolled:
+                    type: string
+                    enum: ['Y', 'N']
+                enrollmentLocation:
+                    type: string
+                    maxLength: 50
+                universityLocation:
+                    type: string
+                    maxLength: 50
+                residencyEnrolledAZCollege2YearsAgo:
+                    type: string
+                    enum: ['Y', 'N']
+                residencyDependentForTax2YearsAgo:
+                    type: string
+                    enum: ['Y', 'N']
+                validIssuedId:
+                    type: string
+                    enum: ['Y', 'N']
+                issuedIdState:
+                    type: string
+                    maxLength: 10
+                issuedArizonaIdDate:
+                    type: string
+                    maxLength: 10
+                operateVehicle:
+                    type: string
+                    enum: ['Y', 'N']
+                vehicleRegisteredToAZ:
+                    type: string
+                    enum: ['Y', 'N']
+                vehicleRegisterationDate:
+                    type: string
+                    maxLength: 10
+                residencyTaxFiling2yearsAgo:
+                    type: string
+                    enum: ['Y', 'N']
+                residencyTaxFillingLocation2YearsAgo:
+                    type: string
+                    enum: ['Y', 'N']
+                residencyGuardianFinancialSupport:
+                    type: string
+                    maxLength: 30
+                residencyEmploymentFinacialSupport:
+                    type: string
+                    maxLength: 30
+                residencyFinancialAidFinancialSupport:
+                    type: string
+                    maxLength: 30
+                residencySpouseFinancialSupport:
+                    type: string
+                    maxLength: 30
+                residencyOtherFinancialSupport:
+                    type: string
+                    maxLength: 30
+                residencyCurrentlyEmployed:
+                    type: string
+                    enum: ['Y', 'N']
+                residencyPrimaryWorkLocation:
+                    type: string
+                    maxLength: 30
+                residencyCurrentlyEmployedStartdate:
+                    type: string
+                    maxLength: 30
+                residencyGuardiansCurrentLocationState:
+                    type: string
+                    maxLength: 30
+                residencyGuardianLocatedInAZ:
+                    type: string
+                    enum: ['Y', 'N']
+                residencyGuardianLocatedInAZStartDate:
+                    type: string
+                    maxLength: 30
+                residencyGuardianTaxFiling2YearsAgo:
+                    type: string
+                    enum: ['Y', 'N']
+                residencyGuardianTaxFiling2YearsAgoLocation:
+                    type: string
+                    maxLength: 30
+                residencyGuardianAzDriverLicense:
+                    type: string
+                    maxLength: 30
+                residencyGuardianEmployedInAz:
+                    type: string
+                    enum: ['Y', 'N']
+                residencyMarried:
+                    type: string
+                    enum: ['Y', 'N']
+                residencySpouseLocation:
+                    type: string
+                    maxLength: 30
+                residencySpouseEmployment:
+                    type: string
+                    maxLength: 30
+                residencySpouseEmploymentLocation:
+                    type: string
+                    maxLength: 30
+                residencySpouseEmploymentLocationDate:
+                    type: string
+                    maxLength: 10
+                residenctSpuseAsuStudent:
+                    type: string
+                    enum: ['Y', 'N']
+                applicationType:
+                    type: string
+                    maxLength: 10
+                userId:
+                    type: string
+                    maxLength: 30
+                applicationPayloadSendDate:
+                    type: string
+                    maxLength: 10
+                                
+                
+                
+              example:   # Sample Interaction
+                firstName: Jessica
+                prefferedName: Jess
+                middleName: Maria
+                lastName: Smith
+                suffix: II
+                email: firstlastname@email.com
+                dateOfBirth: '12/31/2005'
+                pronoun: they/them
+                gender: Female
+                sex: F
+                primaryLanguageAtHome: English
+                countryCode: USA
+                address1: number street apt number
+                address2:
+                city: Phoenix
+                stateProvince: AZ
+                postalCode: 01102
+                mobilePhoneNumber: 1234567890
+                smsOk: Y
+                phoneNumber: 1234567890
+                isLatino: N
+                latinoOrigin: 
+                ethnicGroupCode: 001
+                usCitizen: Y
+                birthCountry: USA
+                visaCode: 
+                citizenCountry: USA
+                guardianFirstName: Phil
+                guardianLastName: Smith
+                guardianRelation: Father
+                guardianIsLiving: Y
+                attendedAsu: N
+                empId: 123456xyz
+                infoPageFlag: Yes
+                newApplicationAccountCreation: Y
+                majorComplete: Yes
+                asuProgramKey: BU-0723
+                asuStartTerm: SPR-A
+                asuProgramChoice: FIN
+                asuSecondProgramChoice: ECON
+                asuSecondProgramTerm: SPR-B
+                asuSecondProgramLocation: Campus C
+                asuThirdProgramChoice:
+                asuThirdProgramTerm:
+                asuThirdProgramLocation: 
+                institutionInfoCompFlag: Y
+                asuCompletedGrades: Y
+                asuCompletedResidency: Y
+                permanentState: AZ
+                oneYearOfResidency: Y
+                residencyStartDate: YYYY-MM-DD
+                currentlyEnrolled: N
+                enrollmentLocation: location information
+                universityLocation: location information
+                residencyEnrolledAZCollege2YearsAgo: No
+                residencyDependentForTax2YearsAgo: No
+                validIssuedId: Y
+                issuedIdState: AZ
+                issuedArizonaIdDate: MM/YYYY
+                operateVehicle: Y
+                vehicleRegisteredToAZ: Yes
+                vehicleRegisterationDate: MM/YYYY
+                residencyTaxFiling2yearsAgo: Y
+                residencyTaxFillingLocation2YearsAgo: location information
+                residencyGuardianFinancialSupport: N
+                residencyEmploymentFinacialSupport: N
+                residencyFinancialAidFinancialSupport: Y
+                residencySpouseFinancialSupport: N
+                residencyOtherFinancialSupport: N
+                residencyCurrentlyEmployed: Y
+                residencyPrimaryWorkLocation: location information
+                residencyCurrentlyEmployedStartdate: YYYY-MM-DD
+                residencyGuardiansCurrentLocationState: MA
+                residencyGuardianLocatedInAZ: N
+                residencyGuardianLocatedInAZStartDate: YYYY-MM-DD
+                residencyGuardianTaxFiling2YearsAgo: Y
+                residencyGuardianTaxFiling2YearsAgoLocation: Y
+                residencyGuardianAzDriverLicense: N
+                residencyGuardianEmployedInAz: N
+                residencyMarried: Y
+                residencySpouseLocation: location information
+                residencySpouseEmployment: Y
+                residencySpouseEmploymentLocation: location information
+                residencySpouseEmploymentLocationDate: YYYY-MM-DD
+                residencySpuseAsuStudent: Y
+                applicationType: RFI
+                userId: 1234567890
+                applicationPayloadSendDate: YYYY-MM-DD HH:MM:SS
+
+              required:
+               - firstName
+               - lastName
+               - email 
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  "{\"id\":\"a2p7f000000hhoCAAQ\"}"
+          
+        '402':
+          description: Error
+        '404':
+          description: Not Found
+        '400':
+          description: Error
+components:
+  schemas: {
+    
+  }
+  securitySchemes:
+    basicAuth:     # <-- arbitrary name for the security scheme
+      type: apiKey
+      in: header       # can be "header", "query" or "cookie"
+      name: Authorization
+      
+security:
+  - basicAuth: []
