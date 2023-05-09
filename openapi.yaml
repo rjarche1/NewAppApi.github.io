@@ -8,8 +8,7 @@ servers:
 info:
   version: "1.0.0"
   title: New Application Api
-  description: >-
-   paths
+  description: >
 
 paths:
   /services/oauth2/token:
