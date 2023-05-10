@@ -451,7 +451,7 @@ paths:
                - email 
       responses:
         '200':
-          description: OK
+          description: “OK” success code, for GET, HEAD, and some PATCH requests.
           content:
             application/json:
               schema:
@@ -460,11 +460,23 @@ paths:
                   "{\"id\":\"a2p7f000000hhoCAAQ\"}"
           
         '402':
-          description: Error
+          description: 	The request has been refused. Verify that the logged-in user has appropriate permissions. If the error code is REQUEST_LIMIT_EXCEEDED, you’ve exceeded API request limits in your org.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                   error: 'error'
         '404':
-          description: Not Found
-        '400':
-          description: Error
+          description: The requested resource couldn’t be found. Check the URI for errors, and verify that there are no sharing issues.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                   error: 'error'
+        '405':
+          description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
           content:
             application/json:
               schema:
