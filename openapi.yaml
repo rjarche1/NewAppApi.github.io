@@ -389,9 +389,9 @@ paths:
                 guardianIsLiving: Y
                 attendedAsu: Y,Y,N,Y,N
                 empId: 123456xyz
-                infoPageFlag: Yes
+                infoPageFlag: Y
                 newApplicationAccountCreation: Y
-                majorComplete: Yes
+                majorComplete: Y
                 asuProgramKey: BU-0723
                 asuStartTerm: SPR-A
                 asuProgramChoice: FIN
