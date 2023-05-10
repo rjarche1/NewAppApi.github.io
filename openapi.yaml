@@ -483,6 +483,71 @@ paths:
                 type: object
                 example:
                    error: 'error'
+        '409':
+          description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                   error: 'error'
+          '410':
+            description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+            content:
+              application/json:
+                schema:
+                  type: object
+                  example:
+                    error: 'error'
+            '412':
+              description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    example:
+                      error: 'error'
+            '415':
+              description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    example:
+                      error: 'error'
+              '428':
+                description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+                content:
+                  application/json:
+                    schema:
+                      type: object
+                      example:
+                        error: 'error'
+              '431':
+                description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+                content:
+                  application/json:
+                    schema:
+                      type: object
+                      example:
+                        error: 'error'
+                '500':
+                  description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+                  content:
+                    application/json:
+                      schema:
+                        type: object
+                        example:
+                          error: 'error'
+                '502':
+                  description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+                  content:
+                    application/json:
+                      schema:
+                        type: object
+                        example:
+                          error: 'error'
+          
 
 components:
   schemas: {
