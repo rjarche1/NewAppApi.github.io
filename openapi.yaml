@@ -8,7 +8,7 @@ servers:
 info:
   version: "1.0.0"
   title: New Application Api
-  description: >
+  description: 
 
 paths:
   /services/oauth2/token:
@@ -470,111 +470,6 @@ paths:
               schema:
                 type: object
                 example:
-                https://edplus-asu--newapp.sandbox.my.salesforce.com/a2p7f000000hhuPAAQ
-
-Here are the invalid parameters:
-
-asuProgramKey : GRPP-PPEMHSMA-123
-dateOfBirth : 09/08/2011
-applicationPayloadSendDate : 2023-05-03 11
-
-Here is the payload
-
-Payload: {
-"firstName" : "Api-interaction-api-test-05-05"
-"preferredFirstName" : "Int"
-"middleName": "action"
-"suffix": "Jr."
-"dateOfBirth" : "09/08/2011"
-"lastName" : "test-interaction-api-test-05-05"
-"email" : "test-interaction-api-test05-05@test.com"
-"asuProgramKey" : "GRPP-PPEMHSMA-123"
-"asuStartTerm" : "2324C"
-"cognitoUserId" : "value"
-"isApplication": "Y"
-"pronoun" : "He/Him"
-"gender": "M"
-"formerFirstName" : "test"
-"formerLastName" : "test"
-"formerMiddleName" : "test"
-"sex": "M"
-"primaryLanguageAtHome" : "English"
-"countryCode" : "USA"
-"address1" : "test street"
-"address2" : "test street 2"
-"city" : "test city"
-"stateProvince" : "AZ"
-"postalCode" : "01101"
-"mobilePhoneNumber" : "1234567890"
-"smsOk" : "N"
-"phoneNumber": "0987654312"
-"isLatino": "N"
-"latinoOrigin": null
-"ethnicGroupCode": "456"
-"usCitizen": "Y"
-"birthCountry": "USA"
-"visaCode" : "111"
-"citizenCountry": "USA"
-"guardianFirstName" : "Test Sr."
-"guardianLastName" : "TSET"
-"guardianRelation": "father"
-"guardianIsLiving" : "Y"
-"attendedAsu" : "N"
-"empId": "asdfgh12"
-"infoPageFlag": "Y"
-"newApplicationAccountCreation": "N"
-"majorComplete" : "Y"
-"asuProgramChoice": "GRPP-PPEMHSMA"
-"asuSecondProgramChoice": "GRPP-PPEMHSMA"
-"asuSecondProgramTerm": "2324C"
-"asuSecondProgramLocation": ""
-"asuThirdProgramChoice": "GRPP-PPEMHSMA"
-"asuThirdProgramTerm": "2324C"
-"asuThirdProgramLocation": ""
-"institutionInfoCompFlag": "N"
-"asuCompletedGrades": "Y"
-"asuCompletedResidency": "N"
-"permanentState": "AZ"
-"oneYearOfResidency": "Y"
-"residencyStartDate": "04/2010"
-"currentlyEnrolled": "Y"
-"enrollmentLocation": "AZ"
-"universityLocation": "Tempe, AZ"
-"residencyEnrolledAZCollege2YearsAgo": "Y"
-"residencyDependentForTax2YearsAgo": "Y"
-"validIssuedId": "Y"
-"issuedIdState": "AZ"
-"issuedArizonaIdDate": "07/22"
-"operateVehicle": "Y"
-"vehicleRegisteredToAZ": "Y"
-"vehicleRegisterationDate": "07/2020"
-"residencyTaxFiling2yearsAgo": "Y"
-"residencyTaxFillingLocation2YearsAgo": "Y"
-"residencyGuardianFinancialSupport": "Y"
-"residencyEmploymentFinacialSupport": "Y"
-"residencyFinancialAidFinancialSupport": "Y"
-"residencySpouseFinancialSupport": "Y"
-"residencyOtherFinancialSupport": "Y"
-"residencyCurrentlyEmployed": "Y"
-"residencyPrimaryWorkLocation": "Y"
-"residencyCurrentlyEmployedStartdate": "04/2020"
-"residencyGuardiansCurrentLocationState": "AZ"
-"residencyGuardianLocatedInAZ": "Y"
-"residencyGuardianLocatedInAZStartDate": "07/1999"
-"residencyGuardianTaxFiling2YearsAgo": "Y"
-"residencySpouseEmployment": "Y"
-"residencySpouseEmploymentLocation": "Y"
-"residencySpouseEmploymentLocationDate": "08/2020"
-"residencySpouseAsuStudent": "Y"
-"residencyGuardianEmployedInAz": "Y"
-"residencyGuardianAzDriverLicense": "Y"
-"residencyGuardianTaxFiling2YearsAgoLocation": "Tempe, AZ"
-"userId": "09876"
-"applicationType": "RFI"
-"residencyMarried": "N"
-"residencySpouseLocation": "Tempe, AZ"
-"applicationPayloadSendDate" : "2023-05-03 11"
-}
 components:
   schemas: {
     
