@@ -484,7 +484,7 @@ paths:
                 example:
                    error: 'error'
         '409':
-          description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+          description: The request could not be completed due to a conflict with the current state of the resource. Check that the API version is compatible with the resource you are requesting.
           content:
             application/json:
               schema:
@@ -500,15 +500,23 @@ paths:
                   example:
                     error: 'error'
             '412':
-              description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+              description: The request was not executed because one or more of the preconditions that the client specified in the request headers was not satisfied. For example, the request includes an If-Unmodified-Since header, but the data was modified after the specified date.
               content:
                 application/json:
                   schema:
                     type: object
                     example:
                       error: 'error'
+          '414':
+            description: 	The length of the URI exceeds the 16,384-byte limit.
+            content:
+              application/json:
+                schema:
+                  type: object
+                  example:
+                    error: 'error'
             '415':
-              description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+              description: 	The entity in the request is in a format that’s not supported by the specified method.
               content:
                 application/json:
                   schema:
@@ -516,7 +524,7 @@ paths:
                     example:
                       error: 'error'
               '428':
-                description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+                description: The request was not executed because it was not conditional. Add one of the Conditional Request Headers, such as If-Match, to the request and resubmit it.
                 content:
                   application/json:
                     schema:
@@ -532,15 +540,14 @@ paths:
                       example:
                         error: 'error'
                 '500':
-                  description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
-                  content:
+                  description: 	An error has occurred within Lightning Platform, so the request couldn’t be completed. Contact Salesforce Customer Support.
                     application/json:
                       schema:
                         type: object
                         example:
                           error: 'error'
-                '502':
-                  description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
+                '503':
+                  description: The server is unavailable to handle the request. Typically this occurs if the server is down for maintenance or is currently overloaded.
                   content:
                     application/json:
                       schema:
