@@ -387,7 +387,7 @@ paths:
                 guardianLastName: Smith
                 guardianRelation: Father
                 guardianIsLiving: Y
-                attendedAsu: 'Y,Y,N,Y,N'
+                attendedAsu: 'Y;Y;N;Y;N'
                 empId: 123456xyz
                 infoPageFlag: Y
                 newApplicationAccountCreation: Y
