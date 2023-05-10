@@ -1,4 +1,4 @@
-openapi: 3.0.0
+openapi: "3.0.0"
 servers:
   # Added by API Auto Mocking Plugin
   - description: SwaggerHub API Auto Mocking
@@ -470,6 +470,8 @@ paths:
               schema:
                 type: object
                 example:
+                   error: 'error'
+
 components:
   schemas: {
     
