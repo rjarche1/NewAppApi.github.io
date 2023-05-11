@@ -8,7 +8,7 @@ servers:
 info:
   version: "1.0.0"
   title: New Application Api
-  description: 
+  description: interaction insertion
 
 paths:
   /services/oauth2/token:
@@ -540,7 +540,8 @@ paths:
                       example:
                         error: 'error'
                 '500':
-                  description: 	An error has occurred within Lightning Platform, so the request couldn’t be completed. Contact Salesforce Customer Support.
+                  description: An error has occurred within Lightning Platform, so the request couldn't be completed. Contact Salesforce Customer Support.
+                  content:
                     application/json:
                       schema:
                         type: object
