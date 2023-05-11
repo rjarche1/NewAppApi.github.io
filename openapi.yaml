@@ -546,7 +546,15 @@ paths:
                       schema:
                         type: object
                         example:
-                          error: 'error'          
+                          error: 'error'  
+        '409':
+          description: The request could not be completed due to a conflict with the current state of the resource. Check that the API version is compatible with the resource you are requesting.
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                   error: 'error'        
 components:
   schemas: {
     
