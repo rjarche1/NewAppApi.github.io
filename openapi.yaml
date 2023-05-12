@@ -184,6 +184,21 @@ paths:
                 attendedAsu:
                     type: string
                     maxLength: 30
+                attendedASUUndergrad:
+                  type: string
+                  maxLength: 30
+                attendedASUGlobalLaunch:
+                  type: string
+                  maxLength: 30
+                attendedASUGFAorPathway:
+                  type: string
+                  maxLength: 30
+                attendedASUEmployee:
+                  type: string
+                  maxLength: 30
+                attendedASUSummerHighSchool:
+                  type: string
+                  maxLength: 30
                 empId:
                     type: string
                     maxLength: 30
@@ -377,7 +392,7 @@ paths:
                 smsOk: Y
                 phoneNumber: 1234567890
                 isLatino: Y
-                latinoOrigin: Mexican
+                latinoOrigin: Mexican 
                 ethnicGroupCode: 001
                 usCitizen: Y
                 birthCountry: USA
@@ -388,6 +403,11 @@ paths:
                 guardianRelation: Father
                 guardianIsLiving: Y
                 attendedAsu: 'Y;Y;N;Y;N'
+                attendedASUUndergrad: 'N'
+                attendedASUGlobalLaunch: 'Y'
+                attendedASUGFAorPathway: 'Y'
+                attendedASUEmployee: 'N'
+                attendedASUSummerHighSchool: 'N'
                 empId: 123456xyz
                 infoPageFlag: Y
                 newApplicationAccountCreation: Y
@@ -490,7 +510,7 @@ paths:
               schema:
                 type: object
                 example:
-                   error: 'error'
+                   message: 'error'
         '410':
           description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
           content:
@@ -498,7 +518,7 @@ paths:
               schema:
                 type: object
                 example:
-                  error: 'tes'
+                  message: 'tes'
           '412':
             description: The request was not executed because one or more of the preconditions that the client specified in the request headers was not satisfied. For example, the request includes an If-Unmodified-Since header, but the data was modified after the specified date.
             content:
@@ -506,7 +526,7 @@ paths:
                 schema:
                   type: object
                   example:
-                    error: 'error'
+                    message: 'error'
         '414':
           description: 	The length of the URI exceeds the 16,384-byte limit.
           content:
@@ -514,7 +534,7 @@ paths:
               schema:
                 type: object
                 example:
-                  error: 'error'
+                  message: 'error'
           '415':
             description: 	The entity in the request is in a format that’s not supported by the specified method.
             content:
@@ -522,7 +542,7 @@ paths:
                 schema:
                   type: object
                   example:
-                    error: 'error'
+                    message: 'error'
             '428':
               description: The request was not executed because it was not conditional. Add one of the Conditional Request Headers, such as If-Match, to the request and resubmit it.
               content:
@@ -530,7 +550,7 @@ paths:
                   schema:
                     type: object
                     example:
-                      error: 'error'
+                      message: 'error'
             '431':
               description: The method specified in the Request-Line isn’t allowed for the resource specified in the URI.
               content:
@@ -538,7 +558,7 @@ paths:
                   schema:
                     type: object
                     example:
-                      error: 'error'
+                      message: 'error'
               '500':
                 description: An error has occurred within Lightning Platform, so the request couldn't be completed. Contact Salesforce Customer Support.
                 content:
@@ -546,7 +566,7 @@ paths:
                     schema:
                       type: object
                       example:
-                        error: 'error'
+                        message: 'error'
               '503':
                 description: The server is unavailable to handle the request. Typically this occurs if the server is down for maintenance or is currently overloaded.
                 content:
@@ -554,7 +574,7 @@ paths:
                     schema:
                       type: object
                       example:
-                        error: 'error'          
+                        message: 'error'          
 components:
   schemas: {
     
