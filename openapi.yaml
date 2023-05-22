@@ -59,10 +59,23 @@ paths:
             postman:
               operationRef: https://documenter.getpostman.com/view/16562029/2s93eR3vUv
                   
-            
+  /services/apexrest/CaseAPI:
+    post:
+      summary: Add a new case  
+      requestBody:
+        content:
+          application/json:
+            schema:      # Request body contents
+              type: object
+              properties:
+                asuRiteId:
+                  type: string
+                  maxLength: 30
+              example:   # Sample Case
+                asuRiteId: '1234567890'
           
         
-  /services/apexrest/InteractionApi:
+  /services/apexrest/InteractionAPI:
     post:
       summary: Adds a new interaction
       security:
