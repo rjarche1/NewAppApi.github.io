@@ -73,15 +73,18 @@ paths:
                   maxLength: 30
               example:   # Sample Case
                 asuRiteId: '1234567890'
-    responses:
-    '200':
-      description: OK
-      content:
-        application/json:
-          schema:
-            type: object
-            example:
-              id: 0127f000000LE6MAAW
+          text/plain:
+            schema:
+              type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  id: 0127f000000LE6MAAW
         
   /services/apexrest/InteractionAPI:
     post:
