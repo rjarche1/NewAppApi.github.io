@@ -68,11 +68,43 @@ paths:
             schema:      # Request body contents
               type: object
               properties:
-                asuRiteId:
+                dbUserId:
+                  type: string
+                  maxLength: 30
+                contactEmail:
+                  type: string
+                  maxLength: 30
+                contactFax:
+                  type: string
+                  maxLength: 30
+                contactMobile:
+                  type: string
+                  maxLength: 30
+                contactId:
+                  type: string
+                  maxLength: 30
+                contactPhone:
+                  type: string
+                  maxLength: 30
+                corporateLogo:
+                  type: string
+                  maxLength: 30
+                courseConnection:
+                  type: string
+                  maxLength: 30
+                courseReccommendation:
                   type: string
                   maxLength: 30
               example:   # Sample Case
-                asuRiteId: '1234567890'
+                dbUserId: '1234567890'
+                contactEmail: 'studentname@email.com'
+                contactFax: [fax number]
+                contactMobile: '1234567890'
+                contactId: '123abc'
+                contactPhone: '1234567890'
+                corporateLogo: logo.png
+                courseConnection: 'ABC-1234'
+                courseReccommendation: '100'
           text/plain:
             schema:
               type: string
