@@ -98,7 +98,7 @@ paths:
               example:   # Sample Case
                 dbUserId: '1234567890'
                 contactEmail: 'studentname@email.com'
-                contactFax: [fax number]
+                contactFax: '11122233333'
                 contactMobile: '1234567890'
                 contactId: '123abc'
                 contactPhone: '1234567890'
