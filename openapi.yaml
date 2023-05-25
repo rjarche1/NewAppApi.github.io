@@ -84,8 +84,8 @@ paths:
                 dbUserId: '09876'
                 caseSubject: 'test subject'
                 corporateLogo: logo.png
-                courseConnection: 'a037f000005dipOAAQ'
-                courseReccommendation: 'm0c1M000000KyjfQAC'
+                courseConnection: 'CC-305848'
+                courseReccommendation: 'PHI 306 (18557) SWU 250 (18954)'
                 additionalComments: "additional comment"
           text/plain:
             schema:
