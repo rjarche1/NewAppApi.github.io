@@ -81,7 +81,7 @@ paths:
                   type: string
                   maxLength: 30
               example:   # Sample Case
-                dbUserId: '09876'
+                userId: '09876'
                 caseSubject: 'test subject'
                 corporateLogo: logo.png
                 courseConnection: 'CC-305848'
@@ -506,9 +506,9 @@ paths:
                 residencySpouseEmploymentLocationDate: YYYY-MM-DD
                 residencySpuseAsuStudent: Y
                 applicationType: RFI
-                userId: 1234567890
+                userId: 09876
                 applicationPayloadSendDate: YYYY-MM-DD HH:MM:SS
-                externalAppId: 000003
+                externalAppId: 101003
                 opportunityStage: Applicant - Started Application
 
               required:
