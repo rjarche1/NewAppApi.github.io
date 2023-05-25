@@ -71,21 +71,6 @@ paths:
                 dbUserId:
                   type: string
                   maxLength: 30
-                contactEmail:
-                  type: string
-                  maxLength: 30
-                contactFax:
-                  type: string
-                  maxLength: 30
-                contactMobile:
-                  type: string
-                  maxLength: 30
-                contactId:
-                  type: string
-                  maxLength: 30
-                contactPhone:
-                  type: string
-                  maxLength: 30
                 corporateLogo:
                   type: string
                   maxLength: 30
@@ -96,15 +81,12 @@ paths:
                   type: string
                   maxLength: 30
               example:   # Sample Case
-                dbUserId: '1234567890'
-                contactEmail: 'studentname@email.com'
-                contactFax: '11122233333'
-                contactMobile: '1234567890'
-                contactId: '123abc'
-                contactPhone: '1234567890'
+                dbUserId: '09876'
+                caseSubject: 'test subject'
                 corporateLogo: logo.png
-                courseConnection: 'ABC-1234'
-                courseReccommendation: '100'
+                courseConnection: 'a037f000005dipOAAQ'
+                courseReccommendation: 'm0c1M000000KyjfQAC'
+                additionalComments: "additional comment"
           text/plain:
             schema:
               type: string
@@ -423,6 +405,12 @@ paths:
                 applicationPayloadSendDate:
                     type: string
                     maxLength: 10
+                externalAppId:
+                    type: string
+                    maxLength: 10
+                opportunityStage:
+                    type: string
+                    maxLength: 30
                                 
                 
                 
@@ -520,6 +508,8 @@ paths:
                 applicationType: RFI
                 userId: 1234567890
                 applicationPayloadSendDate: YYYY-MM-DD HH:MM:SS
+                externalAppId: 000003
+                opportunityStage: Applicant - Started Application
 
               required:
                - firstName
