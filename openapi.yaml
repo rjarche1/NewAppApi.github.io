@@ -81,7 +81,7 @@ paths:
                   type: string
                   maxLength: 30
               example:   # Sample Case
-                userId: "09876"
+                dbUserId: "09876"
                 caseSubject: 'test subject'
                 corporateLogo: logo.png
                 courseConnection: 'CC-305848'
