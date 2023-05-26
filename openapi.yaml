@@ -71,21 +71,15 @@ paths:
                 dbUserId:
                   type: string
                   maxLength: 30
-                corporateLogo:
+                caseSubject:
                   type: string
                   maxLength: 30
-                courseConnection:
-                  type: string
-                  maxLength: 30
-                courseReccommendation:
+                additionalComments:
                   type: string
                   maxLength: 30
               example:   # Sample Case
                 dbUserId: "09876"
                 caseSubject: 'test subject'
-                corporateLogo: logo.png
-                courseConnection: 'CC-305848'
-                courseReccommendation: 'PHI 306 (18557) SWU 250 (18954)'
                 additionalComments: "additional comment"
           text/plain:
             schema:
