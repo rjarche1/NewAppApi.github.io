@@ -78,7 +78,7 @@ paths:
                   type: string
                   maxLength: 30
               example:   # Sample Case
-                dbUserId: "09876"
+                dbUserId: "1222223"
                 caseSubject: 'test subject'
                 additionalComments: "additional comment"
           text/plain:
