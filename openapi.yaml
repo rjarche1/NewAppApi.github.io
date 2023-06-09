@@ -409,101 +409,102 @@ paths:
                 
                 
               example:   # Sample Interaction
-                firstName: Jessica
-                prefferedName: Jess
-                middleName: Maria
-                lastName: Smith
-                suffix: II
-                email: firstlastname@email.com
-                dateOfBirth: '12/31/2005'
-                pronoun: they/them
-                gender: Female
-                sex: F
-                primaryLanguageAtHome: English
-                countryCode: USA
-                address1: number street apt number
-                address2:
-                city: Phoenix
-                stateProvince: AZ
-                postalCode: 01102
-                mobilePhoneNumber: 1234567890
-                smsOk: Y
-                phoneNumber: 1234567890
-                isLatino: Y
-                latinoOrigin: Mexican 
-                ethnicGroupCode: 001
-                usCitizen: Y
-                birthCountry: USA
-                visaCode: 
-                citizenCountry: USA
-                guardianFirstName: Phil
-                guardianLastName: Smith
-                guardianRelation: Father
-                guardianIsLiving: Y
-                attendedAsu: 'Y;Y;N;Y;N'
-                attendedASUUndergrad: 'N'
-                attendedASUGlobalLaunch: 'Y'
-                attendedASUGFAorPathway: 'Y'
-                attendedASUEmployee: 'N'
-                attendedASUSummerHighSchool: 'N'
-                empId: 123456xyz
-                infoPageFlag: Y
-                newApplicationAccountCreation: Y
-                majorComplete: Y
-                asuProgramKey: BU-0723
-                asuStartTerm: SPR-A
-                asuProgramChoice: FIN
-                asuSecondProgramChoice: ECON
-                asuSecondProgramTerm: SPR-B
-                asuSecondProgramLocation: Campus C
-                asuThirdProgramChoice:
-                asuThirdProgramTerm:
-                asuThirdProgramLocation: 
-                institutionInfoCompFlag: Y
-                asuCompletedGrades: Y
-                asuCompletedResidency: Y
-                permanentState: AZ
-                oneYearOfResidency: Y
-                residencyStartDate: YYYY-MM-DD
-                currentlyEnrolled: N
-                enrollmentLocation: location information
-                universityLocation: location information
-                residencyEnrolledAZCollege2YearsAgo: No
-                residencyDependentForTax2YearsAgo: No
-                validIssuedId: Y
-                issuedIdState: AZ
-                issuedArizonaIdDate: MM/YYYY
-                operateVehicle: Y
-                vehicleRegisteredToAZ: Yes
-                vehicleRegisterationDate: MM/YYYY
-                residencyTaxFiling2yearsAgo: Y
-                residencyTaxFillingLocation2YearsAgo: location information
-                residencyGuardianFinancialSupport: N
-                residencyEmploymentFinacialSupport: N
-                residencyFinancialAidFinancialSupport: Y
-                residencySpouseFinancialSupport: N
-                residencyOtherFinancialSupport: N
-                residencyCurrentlyEmployed: Y
-                residencyPrimaryWorkLocation: location information
-                residencyCurrentlyEmployedStartdate: YYYY-MM-DD
-                residencyGuardiansCurrentLocationState: MA
-                residencyGuardianLocatedInAZ: N
-                residencyGuardianLocatedInAZStartDate: YYYY-MM-DD
-                residencyGuardianTaxFiling2YearsAgo: Y
-                residencyGuardianTaxFiling2YearsAgoLocation: Y
-                residencyGuardianAzDriverLicense: N
-                residencyGuardianEmployedInAz: N
-                residencyMarried: Y
-                residencySpouseLocation: location information
-                residencySpouseEmployment: Y
-                residencySpouseEmploymentLocation: location information
-                residencySpouseEmploymentLocationDate: YYYY-MM-DD
-                residencySpuseAsuStudent: Y
-                applicationType: RFI
-                userId: "09876"
-                applicationPayloadSendDate: YYYY-MM-DD HH:MM:SS
-                externalAppId: 101003
-                opportunityStage: Applicant - Started Application
+                "firstName": "Pedro"
+                "prefferedName": "El"
+                "middleName": "mas"
+                "lastName": "Escamoso" 
+                "suffix": "II" 
+                "email": "PEscamoso@test.asu.edu" 
+                "dateOfBirth": "12/31/2000" 
+                "pronoun": "he/his" 
+                "gender": "male" 
+                "sex": "M" 
+                "primaryLanguageAtHome": "English" 
+                "countryCode": "USA" 
+                "address1": "123 elm st" 
+                "address2": null 
+                "city": "Phoenix" 
+                "stateProvince": "AZ" 
+                "postalCode": 85201 
+                "mobilePhoneNumber": 20045766 
+                "smsOk": "Y" 
+                "phoneNumber": 200457663 
+                "isLatino": "Y" 
+                "latinoOrigin": "Mexican" 
+                "ethnicGroupCode": 1 
+                "usCitizen": "Y" 
+                "birthCountry": "USA" 
+                "visaCode": null 
+                "citizenCountry": "USA" 
+                "guardianFirstName": "Phil" 
+                "guardianLastName": "Smith" 
+                "guardianRelation": "Father" 
+                "guardianIsLiving": "Y" 
+                "attendedAsu": "Y;Y;N;Y;N" 
+                "attendedASUUndergrad": "N" 
+                "attendedASUGlobalLaunch": "Y" 
+                "attendedASUGFAorPathway": "Y" 
+                "attendedASUEmployee": "N" 
+                "attendedASUSummerHighSchool": "N" 
+                "empId": "349876008736" 
+                "infoPageFlag": "Y" 
+                "newApplicationAccountCreation": "Y" 
+                "majorComplete": "Y" 
+                "asuProgramKey": "UGES-ESHSEBS" 
+                "asuStartTerm": "SPR-A" 
+                "asuProgramChoice": "FIN" 
+                "asuSecondProgramChoice": "ECON" 
+                "asuSecondProgramTerm": "SPR-B" 
+                "asuSecondProgramLocation": "Campus C" 
+                "asuThirdProgramChoice": null 
+                "asuThirdProgramTerm": null 
+                "asuThirdProgramLocation": null 
+                "institutionInfoCompFlag": "Y" 
+                "asuCompletedGrades": "Y" 
+                "asuCompletedResidency": "Y" 
+                "permanentState": "AZ" 
+                "oneYearOfResidency": "Y" 
+                "residencyStartDate": "2022-08-01" 
+                "currentlyEnrolled": "N" 
+                "enrollmentLocation": "location information" 
+                "universityLocation": "location information" 
+                "residencyEnrolledAZCollege2YearsAgo": "No" 
+                "residencyDependentForTax2YearsAgo": "No" 
+                "validIssuedId": "Y" 
+                "issuedIdState": "AZ" 
+                "issuedArizonaIdDate": "10/2015" 
+                "operateVehicle": "Y" 
+                "vehicleRegisteredToAZ": "Yes" 
+                "vehicleRegisterationDate": "MM/YYYY" 
+                "residencyTaxFiling2yearsAgo": "Y" 
+                "residencyTaxFillingLocation2YearsAgo": "location information" 
+                "residencyGuardianFinancialSupport": "N" 
+                "residencyEmploymentFinacialSupport": "N" 
+                "residencyFinancialAidFinancialSupport": "Y" 
+                "residencySpouseFinancialSupport": "N" 
+                "residencyOtherFinancialSupport": "N" 
+                "residencyCurrentlyEmployed": "Y" 
+                "residencyPrimaryWorkLocation": "Glendale  AZ" 
+                "residencyCurrentlyEmployedStartdate": "2010-04-03" 
+                "residencyGuardiansCurrentLocationState": "MA" 
+                "residencyGuardianLocatedInAZ": "N" 
+                "residencyGuardianLocatedInAZStartDate": "2004-03-20" 
+                "residencyGuardianTaxFiling2YearsAgo": "Y" 
+                "residencyGuardianTaxFiling2YearsAgoLocation": "Y" 
+                "residencyGuardianAzDriverLicense": "N" 
+                "residencyGuardianEmployedInAz": "N" 
+                "residencyMarried": "Y" 
+                "residencySpouseLocation": "Gilbert  AZ" 
+                "residencySpouseEmployment": "Y" 
+                "residencySpouseEmploymentLocation": "Mesa   AZ" 
+                "residencySpouseEmploymentLocationDate": "2012-04-05" 
+                "residencySpuseAsuStudent": "Y" 
+                "applicationType": "RFI" 
+                "userId": "346866" 
+                "applicationPayloadSendDate": "2022-04-05 01:12:33" 
+                "externalAppId": 101003345 
+                "opportunityStage": "Applicant - Started Application"
+
 
               required:
                - firstName
