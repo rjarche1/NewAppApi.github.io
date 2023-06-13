@@ -526,9 +526,8 @@ paths:
                 militaryStatus: ""
                 appCurrentPage: "My Schools"
                 appPreviousPage: "Background"
-                # comment
-
-
+                # end example
+              
               required:
                - firstName
                - lastName
