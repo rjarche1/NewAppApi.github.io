@@ -405,6 +405,12 @@ paths:
                 opportunityStage:
                     type: string
                     maxLength: 30
+                appCurrentPage:
+                    type: string
+                    maxLength: 30
+                appPreviousPage:
+                    type: string
+                    maxLength: 30
                                 
                 
                 
