@@ -433,31 +433,30 @@ paths:
                 suffix: "II" 
                 email: "PEscamoso@test.asu.edu" 
                 dateOfBirth: "2000-12-25" 
-                pronoun": "he/his" 
-                gender": "male" 
-                sex": "M" 
-                primaryLanguageAtHome": "English" 
-                countryCode": "USA" 
-                address1": "123 elm st" 
-                address2": null 
-                city": "Phoenix" 
-                stateProvince": "AZ" 
-                postalCode": 85201 
-                mobilePhoneNumber": 20045766 
-                smsOk": "Y" 
-                phoneNumber": 200457663 
-                isLatino": "Y" 
-                latinoOrigin": "Mexican" 
-                ethnicGroupCode": 1 
-                usCitizen": "Y" 
-                birthCountry": "USA" 
-                visaCode": null 
-                citizenCountry": "USA" 
-                guardianFirstName": "Phil" 
-                guardianLastName": "Smith" 
-                guardianRelation": "Father" 
-                guardianIsLiving": "Y" 
-                attendedAsu: "Y;Y;N;Y;N" 
+                pronoun: "he/his" 
+                gender: "male" 
+                sex: "M" 
+                primaryLanguageAtHome: "English" 
+                countryCode: "USA" 
+                address1: "123 elm st" 
+                address2: null 
+                city: "Phoenix" 
+                stateProvince: "AZ" 
+                postalCode: 85201 
+                mobilePhoneNumber: 20045766 
+                smsOk: "Y" 
+                phoneNumber: 200457663 
+                isLatino: "Y" 
+                latinoOrigin: "Mexican" 
+                ethnicGroupCode: 1 
+                usCitizen: "Y" 
+                birthCountry: "USA" 
+                visaCode: null 
+                citizenCountry: "USA" 
+                guardianFirstName: "Phil" 
+                guardianLastName: "Smith" 
+                guardianRelation: "Father" 
+                guardianIsLiving: "Y"  
                 attendedASUUndergrad: "N" 
                 attendedASUGlobalLaunch: "Y" 
                 attendedASUGFAorPathway: "Y" 
