@@ -405,14 +405,25 @@ paths:
                 opportunityStage:
                     type: string
                     maxLength: 30
+                raceOrigin:
+                    type: string
+                    maxLength: 30
+                militaryBenefits:
+                    type: string
+                    maxLength: 30
+                militaryStatus:
+                    type: string
+                    maxLength: 30
+                militaryBranch:
+                    type: string
+                    maxLength: 30
                 appCurrentPage:
                     type: string
                     maxLength: 30
                 appPreviousPage:
                     type: string
                     maxLength: 30
-                                
-                
+                                                
                 
               example:   # Sample Interaction
                 firstName: "Pedro"
@@ -509,7 +520,11 @@ paths:
                 userId: "346866" 
                 applicationPayloadSendDate: "2022-04-05 01:12:33" 
                 externalAppId: 101003345 
-                opportunityStage: "Applicant - Started Application"
+                opportunityStage: "Applicant - Started Application"              
+                raceOrigin: "Abenaki"
+                militaryBranch: ""
+                militaryBenefits: ""
+                militaryStatus: ""
                 appCurrentPage: "My Schools"
                 appPreviousPage: "Background"
                 # comment
