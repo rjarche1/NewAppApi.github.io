@@ -432,7 +432,7 @@ paths:
                 lastName: "Escamoso" 
                 suffix: "II" 
                 email: "PEscamoso@test.asu.edu" 
-                dateOfBirth": "12/31/2000" 
+                dateOfBirth": "2000-12-25" 
                 pronoun": "he/his" 
                 gender": "male" 
                 sex": "M" 
