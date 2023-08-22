@@ -219,6 +219,9 @@ paths:
                 attendedASUUndergrad:
                   type: string
                   maxLength: 30
+                attendedASUGraduate:
+                  type: string
+                  maxLength: 30
                 attendedASUGlobalLaunch:
                   type: string
                   maxLength: 30
@@ -430,7 +433,10 @@ paths:
                 prefferedName: "El"
                 middleName: "mas"
                 lastName: "Escamoso" 
-                suffix: "II" 
+                suffix: "II"
+                formerFirstName: "Johnathan"
+                formerMiddleName: "James" 
+                formerLastName: "Doe"
                 email: "PEscamoso@test.asu.edu" 
                 dateOfBirth: "2000-12-25" 
                 pronoun: "he/his" 
@@ -462,7 +468,8 @@ paths:
                 attendedASUGFAorPathway: "Y" 
                 attendedASUEmployee: "N" 
                 attendedASUSummerHighSchool: "N" 
-                empId: "349876008736" 
+                attendedASUGraduate: "N"
+                empId: "34987600873" 
                 infoPageFlag: "Y" 
                 newApplicationAccountCreation: "Y" 
                 majorComplete: "Y" 
@@ -514,7 +521,7 @@ paths:
                 residencySpouseEmployment: "Y" 
                 residencySpouseEmploymentLocation: "Mesa   AZ" 
                 residencySpouseEmploymentLocationDate: "2012-04-05" 
-                residencySpuseAsuStudent: "Y" 
+                residencySpouseAsuStudent: "Y" 
                 applicationType: "RFI" 
                 userId: "346866" 
                 applicationPayloadSendDate: "2022-04-05 01:12:33" 
