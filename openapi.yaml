@@ -426,6 +426,9 @@ paths:
                 appPreviousPage:
                     type: string
                     maxLength: 30
+                asuoUtmCampaign:
+                    type: string
+                    maxLength: 255
                                                 
                 
               example:   # Sample Interaction
