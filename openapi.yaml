@@ -58,41 +58,6 @@ paths:
           links:
             postman:
               operationRef: https://documenter.getpostman.com/view/16562029/2s93eR3vUv
-                  
-  /services/apexrest/CaseAPI:
-    post:
-      summary: Add a new case  
-      requestBody:
-        content:
-          application/json:
-            schema:      # Request body contents
-              type: object
-              properties:
-                dbUserId:
-                  type: string
-                  maxLength: 30
-                caseSubject:
-                  type: string
-                  maxLength: 30
-                additionalComments:
-                  type: string
-                  maxLength: 30
-              example:   # Sample Case
-                dbUserId: "1222223"
-                caseSubject: 'test subject'
-                additionalComments: "additional comment"
-          text/plain:
-            schema:
-              type: string
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  id: 0127f000000LE6MAAW
         
   /services/apexrest/InteractionAPI:
     post:
