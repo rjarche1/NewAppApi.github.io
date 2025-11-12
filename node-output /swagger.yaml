@@ -1,0 +1,605 @@
+{
+  "openapi" : "3.0.0",
+  "info" : {
+    "title" : "New Application Api",
+    "description" : "paths",
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "https://virtserver.swaggerhub.com/RJARCHE1_1/NewApp/1.0.0",
+    "description" : "SwaggerHub API Auto Mocking"
+  }, {
+    "url" : "https://edplus-asu--newapp.sandbox.my.salesforce.com",
+    "description" : "salesforce"
+  } ],
+  "security" : [ {
+    "basicAuth" : [ ]
+  } ],
+  "paths" : {
+    "/services/oauth2/token" : {
+      "post" : {
+        "summary" : "Generate Auth Token",
+        "requestBody" : {
+          "description" : "get oauth token",
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/oauth2_token_body"
+              }
+            },
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "example" : {
+                    "access_token" : "00D7f.....AENI!ARwAQKHYb...",
+                    "instance_url" : "https://instance.my.salesforce.com",
+                    "id" : "https://domain.salesforce.com/id/.../...",
+                    "token_type" : "Bearer",
+                    "issued_at" : "1682554353541",
+                    "signature" : "32cpNN2...Xy1i0..."
+                  }
+                }
+              }
+            },
+            "links" : {
+              "postman" : {
+                "operationRef" : "https://documenter.getpostman.com/view/16562029/2s93eR3vUv"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/services/apexrest/InteractionApi" : {
+      "post" : {
+        "summary" : "Adds a new interaction",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/apexrest_InteractionApi_body"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "example" : "{\"id\":\"a2p7f000000hhoCAAQ\"}"
+                }
+              }
+            }
+          },
+          "402" : {
+            "description" : "Error"
+          },
+          "404" : {
+            "description" : "Not Found"
+          },
+          "400" : {
+            "description" : "Error"
+          }
+        },
+        "security" : [ {
+          "basicAuth" : [ ]
+        } ]
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "apexrest_InteractionApi_body" : {
+        "required" : [ "email", "firstName", "lastName" ],
+        "type" : "object",
+        "properties" : {
+          "firstName" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "prefferedName" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "middleName" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "lastName" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "suffix" : {
+            "type" : "string",
+            "enum" : [ "Jr.", "Sr.", "II", "III", "IV" ]
+          },
+          "email" : {
+            "maxLength" : 50,
+            "type" : "string"
+          },
+          "dateOfBirth" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "isApplication" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "interactionSource" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "pronoun" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "gender" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "formerFirstName" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "formerMiddleName" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "formerLastName" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "sex" : {
+            "type" : "string",
+            "enum" : [ "Male", "Female" ]
+          },
+          "primaryLanguageAtHome" : {
+            "maxLength" : 40,
+            "type" : "string"
+          },
+          "countryCode" : {
+            "maxLength" : 3,
+            "type" : "string"
+          },
+          "address1" : {
+            "maxLength" : 50,
+            "type" : "string"
+          },
+          "address2" : {
+            "maxLength" : 50,
+            "type" : "string"
+          },
+          "city" : {
+            "maxLength" : 50,
+            "type" : "string"
+          },
+          "stateProvince" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "postalCode" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "mobilePhoneNumber" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "smsOk" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "phoneNumber" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "isLatino" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "latinoOrigin" : {
+            "maxLength" : 50,
+            "type" : "string"
+          },
+          "ethnicGroupCode" : {
+            "maxLength" : 3,
+            "type" : "string"
+          },
+          "usCitizen" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "birthCountry" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "visaCode" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "citizenCountry" : {
+            "maxLength" : 3,
+            "type" : "string"
+          },
+          "guardianFirstName" : {
+            "maxLength" : 40,
+            "type" : "string"
+          },
+          "guardianLastName" : {
+            "maxLength" : 40,
+            "type" : "string"
+          },
+          "guardianRelation" : {
+            "maxLength" : 40,
+            "type" : "string"
+          },
+          "guardianIsLiving" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "attendedAsu" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "empId" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "infoPageFlag" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "newApplicationAccountCreation" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "majorComplete" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "asuProgramKey" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "asuStartTerm" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "asuProgramChoice" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "asuSecondProgramChoice" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "asuSecondProgramTerm" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "asuSecondProgramLocation" : {
+            "maxLength" : 50,
+            "type" : "string"
+          },
+          "asuThirdProgramChoice" : {
+            "maxLength" : 50,
+            "type" : "string"
+          },
+          "asuThirdProgramTerm" : {
+            "maxLength" : 50,
+            "type" : "string"
+          },
+          "asuThirdProgramLocation" : {
+            "maxLength" : 50,
+            "type" : "string"
+          },
+          "institutionInfoCompFlag" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "asuCompletedGrades" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "asuCompletedResidency" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "permanentState" : {
+            "maxLength" : 3,
+            "type" : "string"
+          },
+          "oneYearOfResidency" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "residencyStartDate" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "currentlyEnrolled" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "enrollmentLocation" : {
+            "maxLength" : 50,
+            "type" : "string"
+          },
+          "universityLocation" : {
+            "maxLength" : 50,
+            "type" : "string"
+          },
+          "residencyEnrolledAZCollege2YearsAgo" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "residencyDependentForTax2YearsAgo" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "validIssuedId" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "issuedIdState" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "issuedArizonaIdDate" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "operateVehicle" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "vehicleRegisteredToAZ" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "vehicleRegisterationDate" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "residencyTaxFiling2yearsAgo" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "residencyTaxFillingLocation2YearsAgo" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "residencyGuardianFinancialSupport" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencyEmploymentFinacialSupport" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencyFinancialAidFinancialSupport" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencySpouseFinancialSupport" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencyOtherFinancialSupport" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencyCurrentlyEmployed" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "residencyPrimaryWorkLocation" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencyCurrentlyEmployedStartdate" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencyGuardiansCurrentLocationState" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencyGuardianLocatedInAZ" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "residencyGuardianLocatedInAZStartDate" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencyGuardianTaxFiling2YearsAgo" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "residencyGuardianTaxFiling2YearsAgoLocation" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencyGuardianAzDriverLicense" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencyGuardianEmployedInAz" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "residencyMarried" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "residencySpouseLocation" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencySpouseEmployment" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencySpouseEmploymentLocation" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "residencySpouseEmploymentLocationDate" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "residenctSpuseAsuStudent" : {
+            "type" : "string",
+            "enum" : [ "Y", "N" ]
+          },
+          "applicationType" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "userId" : {
+            "maxLength" : 30,
+            "type" : "string"
+          },
+          "applicationPayloadSendDate" : {
+            "maxLength" : 10,
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "firstName" : "Jessica",
+          "prefferedName" : "Jess",
+          "middleName" : "Maria",
+          "lastName" : "Smith",
+          "suffix" : "II",
+          "email" : "firstlastname@email.com",
+          "dateOfBirth" : "12/31/2005",
+          "pronoun" : "they/them",
+          "gender" : "Female",
+          "sex" : "F",
+          "primaryLanguageAtHome" : "English",
+          "countryCode" : "USA",
+          "address1" : "number street apt number",
+          "city" : "Phoenix",
+          "stateProvince" : "AZ",
+          "postalCode" : 578,
+          "mobilePhoneNumber" : 1234567890,
+          "smsOk" : "Y",
+          "phoneNumber" : 1234567890,
+          "isLatino" : "N",
+          "ethnicGroupCode" : 1,
+          "usCitizen" : "Y",
+          "birthCountry" : "USA",
+          "citizenCountry" : "USA",
+          "guardianFirstName" : "Phil",
+          "guardianLastName" : "Smith",
+          "guardianRelation" : "Father",
+          "guardianIsLiving" : "Y",
+          "attendedAsu" : "N",
+          "empId" : "123456xyz",
+          "infoPageFlag" : true,
+          "newApplicationAccountCreation" : "Y",
+          "majorComplete" : true,
+          "asuProgramKey" : "BU-0723",
+          "asuStartTerm" : "SPR-A",
+          "asuProgramChoice" : "FIN",
+          "asuSecondProgramChoice" : "ECON",
+          "asuSecondProgramTerm" : "SPR-B",
+          "asuSecondProgramLocation" : "Campus C",
+          "institutionInfoCompFlag" : "Y",
+          "asuCompletedGrades" : "Y",
+          "asuCompletedResidency" : "Y",
+          "permanentState" : "AZ",
+          "oneYearOfResidency" : "Y",
+          "residencyStartDate" : "YYYY-MM-DD",
+          "currentlyEnrolled" : "N",
+          "enrollmentLocation" : "location information",
+          "universityLocation" : "location information",
+          "residencyEnrolledAZCollege2YearsAgo" : false,
+          "residencyDependentForTax2YearsAgo" : false,
+          "validIssuedId" : "Y",
+          "issuedIdState" : "AZ",
+          "issuedArizonaIdDate" : "MM/YYYY",
+          "operateVehicle" : "Y",
+          "vehicleRegisteredToAZ" : true,
+          "vehicleRegisterationDate" : "MM/YYYY",
+          "residencyTaxFiling2yearsAgo" : "Y",
+          "residencyTaxFillingLocation2YearsAgo" : "location information",
+          "residencyGuardianFinancialSupport" : "N",
+          "residencyEmploymentFinacialSupport" : "N",
+          "residencyFinancialAidFinancialSupport" : "Y",
+          "residencySpouseFinancialSupport" : "N",
+          "residencyOtherFinancialSupport" : "N",
+          "residencyCurrentlyEmployed" : "Y",
+          "residencyPrimaryWorkLocation" : "location information",
+          "residencyCurrentlyEmployedStartdate" : "YYYY-MM-DD",
+          "residencyGuardiansCurrentLocationState" : "MA",
+          "residencyGuardianLocatedInAZ" : "N",
+          "residencyGuardianLocatedInAZStartDate" : "YYYY-MM-DD",
+          "residencyGuardianTaxFiling2YearsAgo" : "Y",
+          "residencyGuardianTaxFiling2YearsAgoLocation" : "Y",
+          "residencyGuardianAzDriverLicense" : "N",
+          "residencyGuardianEmployedInAz" : "N",
+          "residencyMarried" : "Y",
+          "residencySpouseLocation" : "location information",
+          "residencySpouseEmployment" : "Y",
+          "residencySpouseEmploymentLocation" : "location information",
+          "residencySpouseEmploymentLocationDate" : "YYYY-MM-DD",
+          "residencySpuseAsuStudent" : "Y",
+          "applicationType" : "RFI",
+          "userId" : 1234567890,
+          "applicationPayloadSendDate" : "YYYY-MM-DD HH:MM:SS"
+        }
+      },
+      "oauth2_token_body" : {
+        "type" : "object",
+        "properties" : {
+          "username" : {
+            "type" : "string"
+          },
+          "password" : {
+            "type" : "string"
+          },
+          "grant_type" : {
+            "type" : "string"
+          },
+          "client_id" : {
+            "type" : "string"
+          },
+          "client_secret" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "username" : "user@salesforceinstance.com",
+          "password" : "userpassword",
+          "grant_type" : "password",
+          "client_id" : "[usersClientId]",
+          "client_secret" : "[usersClientSecret]"
+        }
+      }
+    },
+    "securitySchemes" : {
+      "basicAuth" : {
+        "type" : "apiKey",
+        "name" : "Authorization",
+        "in" : "header"
+      }
+    }
+  }
+}
