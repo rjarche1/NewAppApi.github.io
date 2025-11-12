@@ -2,7 +2,7 @@
   "openapi" : "3.0.0",
   "info" : {
     "title" : "New Application Api",
-    "description" : "paths",
+    "description" : "Interaction API endpoint to handle interactions coming from the new app website",
     "version" : "1.0.0"
   },
   "servers" : [ {
