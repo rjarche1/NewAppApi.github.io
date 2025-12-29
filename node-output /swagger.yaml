@@ -2,7 +2,7 @@
   "openapi" : "3.0.0",
   "info" : {
     "title" : "New Application Api",
-    "description" : "paths",
+    "description" : "Interaction API endpoint to handle interactions coming from the new app website",
     "version" : "1.0.0"
   },
   "servers" : [ {
@@ -479,6 +479,154 @@
           "applicationPayloadSendDate" : {
             "maxLength" : 10,
             "type" : "string"
+          },
+          "externalAppId" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "opportunityStage" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "militaryBenefits" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "militaryStatus" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "militaryBranch" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "militaryService" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "appCurrentPage" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "appPreviousPage" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "applicationOriginUrl" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "googleClientId" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "militaryAsuCanRequestJST" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "gaSessionId" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "campusChange" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "previousCampus" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmCampaign" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmCampaignId" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmContent" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmEcd22" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmInitiative" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmMedium" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmSource" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmTerm" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmAdGroupId" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmGclId" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmGclSrc" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmPsfcId" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoUtmAdId" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "geoIpAddress" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoLeadClass" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoLeadSubClass" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoBriteVerifyPhoneType" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuoBriteVerifyEmailStatus" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "asuLocalLocation" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "starbucksPartnerId" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "applicationFraudRiskStatus" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "applicationFraudRiskLevel" : {
+            "maxLength" : 10,
+            "type" : "string"
+          },
+          "userType" : {
+            "maxLength" : 10,
+            "type" : "string"
           }
         },
         "example" : {
@@ -530,8 +678,8 @@
           "currentlyEnrolled" : "N",
           "enrollmentLocation" : "location information",
           "universityLocation" : "location information",
-          "residencyEnrolledAZCollege2YearsAgo" : false,
-          "residencyDependentForTax2YearsAgo" : false,
+          "residencyEnrolledAZCollege2YearsAgo" : "N",
+          "residencyDependentForTax2YearsAgo" : "N",
           "validIssuedId" : "Y",
           "issuedIdState" : "AZ",
           "issuedArizonaIdDate" : "MM/YYYY",
@@ -563,7 +711,44 @@
           "residencySpuseAsuStudent" : "Y",
           "applicationType" : "RFI",
           "userId" : 1234567890,
-          "applicationPayloadSendDate" : "YYYY-MM-DD HH:MM:SS"
+          "applicationPayloadSendDate" : "YYYY-MM-DD HH:MM:SS",
+          "externalAppId" : "str",
+          "opportunityStage" : "str",
+          "militaryBenefits" : "str",
+          "militaryStatus" : "str",
+          "militaryBranch" : "str",
+          "militaryService" : "str",
+          "appCurrentPage" : "str",
+          "appPreviousPage" : "str",
+          "applicationOriginUrl" : "str",
+          "googleClientId" : "str",
+          "militaryAsuCanRequestJST" : "str",
+          "gaSessionId" : "str",
+          "campusChange" : "str",
+          "previousCampus" : "str",
+          "asuoUtmCampaign" : "str",
+          "asuoUtmCampaignId" : "str",
+          "asuoUtmContent" : "str",
+          "asuoUtmEcd22" : "str",
+          "asuoUtmInitiative" : "str",
+          "asuoUtmMedium" : "str",
+          "asuoUtmSource" : "str",
+          "asuoUtmTerm" : "str",
+          "asuoUtmAdGroupId" : "str",
+          "asuoUtmGclId" : "str",
+          "asuoUtmGclSrc" : "str",
+          "asuoUtmPsfcId" : "str",
+          "asuoUtmAdId" : "str",
+          "geoIpAddress" : "str",
+          "asuoLeadClass" : "str",
+          "asuoLeadSubClass" : "str",
+          "asuoBriteVerifyPhoneType" : "str",
+          "asuoBriteVerifyEmailStatus" : "str",
+          "asuLocalLocation" : "str",
+          "starbucksPartnerId" : "str",
+          "applicationFraudRiskStatus" : "str",
+          "applicationFraudRiskLevel" : "str",
+          "userType" : "str"
         }
       },
       "oauth2_token_body" : {
